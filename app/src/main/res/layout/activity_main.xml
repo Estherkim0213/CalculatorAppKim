@@ -16,8 +16,8 @@
         android:layout_marginTop="272dp"
         android:backgroundTint="@color/ButtonLightGrey"
         android:includeFontPadding="false"
-        android:text="("
         android:onClick="operatorSelected"
+        android:text="("
         android:textSize="@dimen/characterSize"
         app:iconPadding="10dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -281,6 +281,7 @@
         android:layout_marginTop="692dp"
         android:backgroundTint="@color/ButtonDarkGrey"
         android:text="Back"
+        android:onClick="operatorSelected"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/button46"
         app:layout_constraintTop_toTopOf="parent" />
@@ -311,8 +312,8 @@
 
     <TextView
         android:id="@+id/inputView"
-        android:layout_width="222dp"
-        android:layout_height="39dp"
+        android:layout_width="371dp"
+        android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="128dp"
         android:paddingRight="10dp"
@@ -325,10 +326,10 @@
 
     <TextView
         android:id="@+id/OutputView"
-        android:layout_width="240dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="184dp"
+        android:layout_width="365dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="188dp"
         android:fontFamily="sans-serif"
         android:paddingRight="10dp"
         android:text="OutputView"
