@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private String equation = "";
     private int buttonSelected;
     private double variable;
-    int[] intArray;
+    private static int[] intArray;
 
     public void numSelected(View v) {
         if (v.getId() == R.id.button1) {
@@ -102,20 +102,19 @@ public class MainActivity extends AppCompatActivity {
             Log.i("Esther", "SelectedBack");
             equation = equation.substring(0,equation.length()-1);
         }
-        else if (v.getId() == R.id.clearButton) {
+        if (equation.length() < 15) {
+            resultTv.setText(equation);
+        }
+        if (v.getId() == R.id.clearButton) {
             Log.i("Esther", "SelectedClear");
             equation = "";
             resultTv.setText("0");
-        } else if (v.getId() == R.id.equalsButton) {
+        }if (v.getId() == R.id.equalsButton) {
             Log.i("Esther", "SelectedEqual");
             intArray = new int[equation.length()];
             solutionTv.setText(resultTv.getText());
             createInt(equation);
             resultTv.setText(calculations(equation));
-        }
-
-        if (equation.length() < 15) {
-            resultTv.setText(equation);
         }
     }
 
@@ -135,18 +134,21 @@ public class MainActivity extends AppCompatActivity {
         String num = "";
         int value;
         int x = 0;
-        for (int i = 0; i < data.length(); i++) {
-            if (isInt(String.valueOf(data.charAt(i)))) {
+        for (int i = 0; i < data.length()-1; i++) {
+            if (isInt(String.valueOf(data.substring(i,i+1)))){
+                Log.i("Esther", "kuldeep was not");
                 num += data.charAt(i);
-            } else if((String.valueOf(data.charAt(i))== "+"
-            || String.valueOf(data.charAt(i))== "-"
-            || String.valueOf(data.charAt(i))== "^"
-            || String.valueOf(data.charAt(i))== "×"
-            || String.valueOf(data.charAt(i))== "("
-            || String.valueOf(data.charAt(i))== ")"
-            ||String.valueOf(data.charAt(i))== "÷"
-            ||String.valueOf(data.charAt(i)) == "√"
-            ||String.valueOf(data.charAt(i)) == ".")) {
+                Log.i("Esther", num);
+            } else if((data.substring(i,i+1).equals('+')
+            || data.substring(i,i+1).equals("-")
+            || data.substring(i,i+1).equals("^")
+            || data.substring(i,i+1).equals("×")
+            || data.substring(i,i+1).equals("(")
+            || data.substring(i,i+1).equals(")")
+            ||data.substring(i,i+1).equals("÷")
+            ||data.substring(i,i+1).equals("√")
+            ||data.substring(i,i+1).equals("."))) {
+                Log.i("Esther", "kuldeep");
                 value = Integer.valueOf(num);
                 intArray[x] = value;
                 x++;
@@ -159,18 +161,26 @@ public class MainActivity extends AppCompatActivity {
         int x = 0;
         double calculate = 0;
         String outPut= "";
-        for (int i = 0; i < data.length(); i++) {
+
+        for (int i = 0; i < data.length()-1; i++) {
             if (isInt(String.valueOf(data.charAt(i))) == false) {
+                Log.i("Esther", "kuldeep was here");
                 if (String.valueOf(data.charAt(i))=="+"){
                     calculate = intArray[x] + intArray[x + 1];
+                    Log.i("Esther", "kuldeep wasnt here");
+
                 }
                 else if (String.valueOf(data.charAt(i))=="-"){
                     calculate = intArray[x] - intArray[x + 1];
+                    Log.i("Esther", outPut);
+
                 }
                 x++;
             }
         }
         outPut = String.valueOf(calculate);
+
+        Log.i("Esther", outPut);
         return outPut;
     }
 }
