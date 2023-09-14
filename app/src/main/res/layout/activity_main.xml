@@ -9,21 +9,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/LeftParenthesesButton"
-        android:layout_width="@dimen/buttonWidthHeight"
-        android:layout_height="@dimen/buttonWidthHeight"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="272dp"
-        android:backgroundTint="@color/ButtonLightGrey"
-        android:includeFontPadding="false"
-        android:onClick="operatorSelected"
-        android:text="("
-        android:textSize="@dimen/characterSize"
-        app:iconPadding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/button2"
         android:layout_width="@dimen/buttonWidthHeight"
         android:layout_height="@dimen/buttonWidthHeight"
@@ -189,13 +174,13 @@
         android:id="@+id/SquareRootButton"
         android:layout_width="@dimen/buttonWidthHeight"
         android:layout_height="@dimen/buttonWidthHeight"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="212dp"
         android:layout_marginTop="272dp"
         android:backgroundTint="@color/ButtonLightGrey"
-        android:text="√"
         android:onClick="operatorSelected"
+        android:text="√"
         android:textSize="@dimen/characterSize"
-        app:layout_constraintStart_toEndOf="@+id/RightParenthesesButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -209,19 +194,6 @@
         android:onClick="operatorSelected"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/SquareRootButton"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/RightParenthesesButton"
-        android:layout_width="@dimen/buttonWidthHeight"
-        android:layout_height="@dimen/buttonWidthHeight"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="272dp"
-        android:backgroundTint="@color/ButtonLightGrey"
-        android:text=")"
-        android:onClick="operatorSelected"
-        android:textSize="@dimen/characterSize"
-        app:layout_constraintStart_toEndOf="@+id/LeftParenthesesButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -244,12 +216,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="692dp"
         android:text="."
+        android:onClick="numSelected"
         android:textSize="@dimen/characterSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button46"
+        android:id="@+id/button0"
         android:layout_width="@dimen/buttonWidthHeight"
         android:layout_height="@dimen/buttonWidthHeight"
         android:layout_marginStart="20dp"
@@ -283,7 +256,7 @@
         android:text="Back"
         android:onClick="operatorSelected"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/button46"
+        app:layout_constraintStart_toEndOf="@+id/button0"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
