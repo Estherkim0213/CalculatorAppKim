@@ -138,7 +138,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="356dp"
         android:backgroundTint="@color/ButtonLightGrey"
-        android:text="π"
+        android:text="@string/pi"
         android:onClick="numSelected"
         android:textSize="@dimen/characterSize"
         app:layout_constraintStart_toEndOf="@+id/clearButton"
@@ -178,7 +178,7 @@
         android:layout_marginTop="272dp"
         android:backgroundTint="@color/ButtonLightGrey"
         android:onClick="operatorSelected"
-        android:text="√"
+        android:text="@string/root"
         android:textSize="@dimen/characterSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

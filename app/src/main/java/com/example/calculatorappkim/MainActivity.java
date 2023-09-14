@@ -132,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
         hasDecimal = false;
     }
 
-    /**cite:https://www.baeldung.com/java-c
+    /**cite
+     * :https://www.baeldung.com/java-c
      * heck-string-number#:~:text=3.-,Using%20Plain%20Java,parseInt(String)
      */
     public static boolean isInt(String strNum) {

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CalculatorAppKim</string>
+    <string name="pi">π</string>
+    <string name="root">√</string>
 </resources>
